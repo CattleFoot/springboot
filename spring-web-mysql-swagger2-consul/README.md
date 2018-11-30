@@ -79,6 +79,10 @@ Consider renaming one of the beans or enabling overriding by setting spring.main
 
 目前猜测是版本问题，将spring cloud版本跳到2.0.3时则没有问题。
 
+问题可参考：   
+http://www.greenhtml.com/tag/spring-cloud-boot/  
+
+
 
 
 ### 问题：
