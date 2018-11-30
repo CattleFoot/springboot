@@ -28,6 +28,39 @@
 参考：  
 https://dzone.com/articles/using-mysql-jdbc-driver-with-spring-boot
 
+3. swagger2 集成
+注解依赖：
+```xml
+ <!-- swagger2 注解依赖 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+```
+ui依赖(这个是可选的):
+```xml
+<!-- swagger2 ui-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+```
+
+参考：   
+https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### 问题：
