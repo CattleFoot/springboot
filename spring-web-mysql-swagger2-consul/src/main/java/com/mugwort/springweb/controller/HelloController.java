@@ -1,12 +1,13 @@
-package com.mugwort.consul.controller;
+package com.mugwort.springweb.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-    @RequestMapping("/hello")
-    public String hello() {
-        return "helle consul";
+
+    @RequestMapping(value = "/hello")
+    public String sayHello() {
+        return "hello";
     }
 }
