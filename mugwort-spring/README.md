@@ -1,6 +1,7 @@
 
-1. 
-
+1. idea java项目转maven项目
+[1] 项目上右键 Add Framework Support；
+[2] 选择列表项的maven即可；
 
 2. spring boot with web
 [1]. https://www.baeldung.com/spring-boot-start

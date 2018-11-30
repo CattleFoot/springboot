@@ -1,0 +1,76 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<configuration>-->
+    <!--<include resource="org/springframework/boot/logging/logback/base.xml"/>-->
+
+    <!--<property name="logHome" value="." />-->
+    <!--<property name="logFile" value="${logHome}/setting" />-->
+
+    <!--&lt;!&ndash; 控制台输出 &ndash;&gt;-->
+    <!--<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">-->
+        <!--<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">-->
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
+
+    <!--&lt;!&ndash; 按照每天生成日志文件 &ndash;&gt;-->
+    <!--<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<file>${logFile}.log</file>-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">-->
+            <!--<FileNamePattern>${logFile}.%d{yyyy-MM-dd}.%i.log</FileNamePattern>-->
+            <!--&lt;!&ndash;日志文件保留天数&ndash;&gt;-->
+            <!--<MaxHistory>30</MaxHistory>-->
+            <!--&lt;!&ndash;文件大小触发重写新文件&ndash;&gt;-->
+            <!--<MaxFileSize>50MB</MaxFileSize>-->
+        <!--</rollingPolicy>-->
+        <!--<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">-->
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level - %msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
+
+    <!--&lt;!&ndash;error 按照每天生成日志文件 &ndash;&gt;-->
+    <!--<appender name="errorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<file>${logFile}-error.log</file>-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">-->
+            <!--<FileNamePattern>${logFile}-error.%d{yyyy-MM-dd}.%i.log</FileNamePattern>-->
+            <!--&lt;!&ndash;日志文件保留天数&ndash;&gt;-->
+            <!--<MaxHistory>30</MaxHistory>-->
+            <!--&lt;!&ndash;文件大小触发重写新文件&ndash;&gt;-->
+            <!--<MaxFileSize>50MB</MaxFileSize>-->
+        <!--</rollingPolicy>-->
+        <!--<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">-->
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level - %msg%n</pattern>-->
+        <!--</encoder>-->
+        <!--<filter class="ch.qos.logback.classic.filter.LevelFilter">&lt;!&ndash; 只打印错误日志 &ndash;&gt;-->
+            <!--<level>error</level>-->
+            <!--<onMatch>ACCEPT</onMatch>-->
+            <!--<onMismatch>DENY</onMismatch>-->
+        <!--</filter>-->
+    <!--</appender>-->
+
+    <!--&lt;!&ndash; 开发环境 + 测试环境 + 预发布环境. 多个使用逗号隔开. &ndash;&gt;-->
+    <!--<springProfile name="dev,test,pre,default,local">-->
+        <!--<logger name="com.hand.hospital" level="debug"/>-->
+
+        <!--&lt;!&ndash; mongo config &ndash;&gt;-->
+        <!--<logger name="org.mongodb.driver" level="debug"/>-->
+        <!--<logger name="org.springframework.data.mongodb.core.MongoTemplate" level="debug"/>-->
+
+        <!--&lt;!&ndash; mybatis config &ndash;&gt;-->
+        <!--<logger name="com.apache.ibatis" level="trace"/>-->
+        <!--<logger name="java.sql.Connection" level="debug"/>-->
+        <!--<logger name="java.sql.Statement" level="debug"/>-->
+        <!--<logger name="java.sql.PreparedStatement" level="debug"/>-->
+    <!--</springProfile>-->
+
+    <!--&lt;!&ndash; 生产环境. &ndash;&gt;-->
+    <!--<springProfile name="prod">-->
+        <!--<logger name="com.hand.hospital" level="info"/>-->
+    <!--</springProfile>-->
+
+    <!--&lt;!&ndash; 日志输出级别 &ndash;&gt;-->
+    <!--<root level="info">-->
+        <!--<appender-ref ref="file" />-->
+        <!--<appender-ref ref="errorFile" />-->
+    <!--</root>-->
+
+<!--</configuration>-->
