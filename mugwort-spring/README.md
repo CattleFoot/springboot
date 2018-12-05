@@ -14,15 +14,19 @@
 4. spring boot with consul 
 [1]. http://www.ityouknow.com/springcloud/2018/07/20/spring-cloud-consul.html
 
+5. spring boot with consul's config 
+[1]. https://segmentfault.com/a/1190000013724422
+[2]. https://blog.csdn.net/bawcwchen/article/details/80645540
 
 
 注意：
 系列文章：
 [1]. https://juejin.im/post/5b1922cdf265da6e173a51ec
 [2]. http://www.ityouknow.com/springcloud/2018/07/20/spring-cloud-consul.html
+[3]. 白话Spring系列 https://blog.lqdev.cn/categories/SpringCloud/
 
 
-swagger2 注解说明：
+**swagger2 注解说明：**
 [1]. https://juejin.im/post/5b1922cdf265da6e173a51ec
 - @Api：用在类上，标志此类是Swagger资源
 	value：接口说明
@@ -66,3 +70,18 @@ swagger2 注解说明：
 - @Authorization	Declares an authorization scheme to be used on a resource or an operation.
 
 - @AuthorizationScope	Describes an OAuth2 authorization scope.
+
+
+**模版引擎：**
+Spring支持：Thymeleaf、velocity和freemarker等模版引擎。
+参考：  
+[1].Thymeleaf入门 https://www.cnblogs.com/jiangbei/p/8462294.html
+
+### 问题
+1. bootstrap.yml与application.properties有何区别？  
+bootstrap.yml(bootstrap.properties)用来程序引导时执行，应用于更加早期配置信息读取，如可以使用来配置application.yml中使用到的参数等；
+application.yml(application.properties)应用程序特有配置信息，可以用来配置后续各个模块中需要使用的公共参数等，
+**bootstrap先于application加载**
+
+参考：  
+[1]. https://www.cnblogs.com/BlogNetSpace/p/8469033.html

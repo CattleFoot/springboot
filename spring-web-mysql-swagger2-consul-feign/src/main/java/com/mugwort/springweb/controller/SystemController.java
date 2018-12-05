@@ -28,7 +28,6 @@ public class SystemController {
         if (bean.getId() != id) {
             return null;
         }
-        systemRepository.findAll();
         return systemRepository.save(bean);
     }
 }

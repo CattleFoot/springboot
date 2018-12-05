@@ -1,7 +1,7 @@
 DROP  TABLE IF EXISTS  system;
-create table system(
-id int not null auto_increment,
-name  varchar(100) not null ,
-lastaudit date not null,
-primary key  (id),
-)
+CREATE TABLE system (
+                      id int(11) unsigned NOT NULL AUTO_INCREMENT,
+                      name varchar(1024) DEFAULT NULL,
+                      lastaudit varchar(1024) DEFAULT NULL,
+                      PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
